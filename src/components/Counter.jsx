@@ -32,7 +32,7 @@ const Counter = ({
   const digits = places.map((place) => {
     const digit = Math.floor((value / place) % 10);
     const isLeading = value < place;
-    if (isLeading && !digitPlaceHolders) {
+    if (isLeading && !digitPlaceHolders && place !== 1) {
       return null;
     }
     return {
