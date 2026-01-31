@@ -1,0 +1,118 @@
+.bubble-menu {
+  position: relative;
+  z-index: 30;
+}
+
+.bubble-menu.is-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.bubble-menu__bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 2.5rem;
+}
+
+.bubble-menu__bubble {
+  width: 56px;
+  height: 56px;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  border: none;
+  box-shadow: 0 16px 30px rgba(15, 23, 42, 0.18);
+  background: #ffffff;
+  color: #111111;
+  font-size: 1rem;
+}
+
+.bubble-menu__logo {
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.bubble-menu__toggle {
+  cursor: pointer;
+  position: relative;
+  gap: 0.35rem;
+}
+
+.bubble-menu__toggle-line {
+  width: 22px;
+  height: 2px;
+  display: block;
+  background: currentColor;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.bubble-menu__toggle-line.is-open:first-of-type {
+  transform: translateY(4px) rotate(45deg);
+}
+
+.bubble-menu__toggle-line.is-open:last-of-type {
+  transform: translateY(-4px) rotate(-45deg);
+}
+
+.bubble-menu__overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 40;
+}
+
+.bubble-menu__grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  width: min(900px, 90vw);
+}
+
+.bubble-menu__item {
+  background: #f8fafc;
+  border-radius: 999px;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-weight: 600;
+  font-size: 0.85rem;
+  transition: transform 0.25s ease, background 0.25s ease, color 0.25s ease;
+  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.12);
+}
+
+.bubble-menu__item:hover {
+  background: var(--hover-bg);
+}
+
+.bubble-menu__item:hover .bubble-menu__label {
+  color: var(--hover-color);
+}
+
+.bubble-menu__label {
+  transition: color 0.25s ease;
+}
+
+@media (max-width: 900px) {
+  .bubble-menu__bar {
+    padding: 1.25rem 1.5rem;
+  }
+
+  .bubble-menu__bubble {
+    width: 48px;
+    height: 48px;
+  }
+
+  .bubble-menu__grid {
+    grid-template-columns: 1fr;
+  }
+}

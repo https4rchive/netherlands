@@ -1,0 +1,272 @@
+.app {
+  min-height: 100vh;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 3rem;
+  align-items: center;
+  padding-top: 2rem;
+}
+
+.hero__content {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.hero__subhead {
+  font-size: 1.05rem;
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.hero__media {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.hero__card {
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.hero__card--large {
+  height: 320px;
+}
+
+.hero__card--small {
+  height: 200px;
+}
+
+.places {
+  margin-top: 4rem;
+}
+
+.places__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+
+.place-card {
+  border: none;
+  background: var(--card);
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  display: grid;
+  text-align: left;
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.place-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 30px 60px rgba(15, 23, 42, 0.15);
+}
+
+.place-card__image {
+  height: 200px;
+  overflow: hidden;
+}
+
+.place-card__body {
+  padding: 1.5rem;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.place-card__city {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--accent);
+}
+
+.place-card__desc {
+  color: var(--muted);
+}
+
+.place-modal {
+  position: fixed;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  z-index: 60;
+}
+
+.place-modal__panel {
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 2rem;
+  width: min(900px, 92vw);
+  max-height: 85vh;
+  overflow-y: auto;
+  box-shadow: 0 30px 70px rgba(15, 23, 42, 0.2);
+  position: relative;
+  z-index: 2;
+}
+
+.place-modal__close {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  border: 1px solid #e2e8f0;
+  background: #ffffff;
+  border-radius: 999px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.place-modal__header {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  align-items: start;
+  margin-bottom: 2rem;
+}
+
+.place-modal__header ul {
+  list-style: none;
+  display: grid;
+  gap: 0.5rem;
+  padding: 0;
+}
+
+.place-modal__header li {
+  background: #f1f5f9;
+  padding: 0.5rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+}
+
+.place-modal__gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.place-modal__gallery img {
+  border-radius: 18px;
+  height: 180px;
+}
+
+.place-modal__notes {
+  background: #f8fafc;
+  border-radius: 18px;
+  padding: 1.25rem;
+}
+
+.place-modal__backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.4);
+  border: none;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.about__grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.itinerary__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+.itinerary__card {
+  background: var(--card);
+  border-radius: 20px;
+  padding: 1.5rem;
+  box-shadow: var(--shadow);
+  display: grid;
+  gap: 0.75rem;
+}
+
+.itinerary__card span {
+  font-size: 0.85rem;
+  color: var(--accent);
+}
+
+.notes__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+.note-card {
+  padding: 1.5rem;
+  border-radius: 20px;
+  background: #ffffff;
+  box-shadow: var(--shadow);
+  display: grid;
+  gap: 0.75rem;
+}
+
+.note-card span {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--accent);
+}
+
+.contact__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+}
+
+.contact__form {
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 2rem;
+  box-shadow: var(--shadow);
+  display: grid;
+  gap: 1rem;
+}
+
+.contact__form label {
+  display: grid;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.contact__form input,
+.contact__form textarea {
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 0.75rem;
+  font-family: inherit;
+}
+
+.contact__details {
+  display: grid;
+  gap: 0.75rem;
+  align-content: start;
+}
+
+@media (max-width: 900px) {
+  .hero__card--large {
+    height: 240px;
+  }
+
+  .hero__card--small {
+    height: 180px;
+  }
+
+  .place-modal__panel {
+    padding: 1.5rem;
+  }
+}
