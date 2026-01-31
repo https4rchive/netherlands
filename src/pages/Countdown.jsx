@@ -23,7 +23,7 @@ const Countdown = () => {
   }, [now]);
 
   return (
-    <main className="page page--dark">
+    <main className="page page--dark page--countdown">
       <Link className="back-bubble back-bubble--light" to="/">
         Back
       </Link>
@@ -33,10 +33,10 @@ const Countdown = () => {
           <div className="countdown-card">
             <Counter
               value={timeLeft.days}
-              places={[100, 10, 1]}
-              fontSize={96}
+              places={[1000, 100, 10, 1]}
+              fontSize={84}
               padding={5}
-              gap={16}
+              gap={12}
               textColor="white"
               fontWeight={900}
               digitPlaceHolders
@@ -47,9 +47,9 @@ const Countdown = () => {
             <Counter
               value={timeLeft.hours}
               places={[10, 1]}
-              fontSize={96}
+              fontSize={84}
               padding={5}
-              gap={16}
+              gap={12}
               textColor="white"
               fontWeight={900}
               digitPlaceHolders
@@ -60,9 +60,9 @@ const Countdown = () => {
             <Counter
               value={timeLeft.minutes}
               places={[10, 1]}
-              fontSize={96}
+              fontSize={84}
               padding={5}
-              gap={16}
+              gap={12}
               textColor="white"
               fontWeight={900}
               digitPlaceHolders
@@ -73,9 +73,9 @@ const Countdown = () => {
             <Counter
               value={timeLeft.seconds}
               places={[10, 1]}
-              fontSize={96}
+              fontSize={84}
               padding={5}
-              gap={16}
+              gap={12}
               textColor="white"
               fontWeight={900}
               digitPlaceHolders

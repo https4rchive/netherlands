@@ -4,7 +4,6 @@ import Countdown from './pages/Countdown';
 import Memory from './pages/Memory';
 import Todo from './pages/Todo';
 import TopSecret from './pages/TopSecret';
-import Backpack from './pages/Backpack';
 import './App.css';
 
 const App = () => {
@@ -16,7 +15,6 @@ const App = () => {
         <Route path="/memory" element={<Memory />} />
         <Route path="/todo" element={<Todo />} />
         <Route path="/top-secret" element={<TopSecret />} />
-        <Route path="/backpack" element={<Backpack />} />
       </Routes>
     </HashRouter>
   );

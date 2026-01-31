@@ -28,12 +28,6 @@ const bubbles = [
     path: '/top-secret',
     rotation: 10,
     radius: '50% 50% 60% 40% / 45% 55% 50% 50%'
-  },
-  {
-    label: 'BACKPACK',
-    path: '/backpack',
-    rotation: -10,
-    radius: '55% 45% 50% 50% / 50% 55% 45% 50%'
   }
 ];
 
