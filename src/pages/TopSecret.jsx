@@ -14,12 +14,12 @@ const TopSecret = () => {
 
   return (
     <main className="page">
-      <Link className="back-button" to="/">
+      <Link className="back-bubble" to="/">
         Back
       </Link>
       <div className="page__content">
-        <p className="eyebrow">Top Secret</p>
-        <h1>Restricted notes</h1>
+        <h1>Top Secret</h1>
+        <p className="page__subtext">Private notes stay behind a passcode.</p>
         {!unlocked ? (
           <form className="secret-form" onSubmit={handleUnlock}>
             <input
@@ -28,14 +28,12 @@ const TopSecret = () => {
               value={input}
               onChange={(event) => setInput(event.target.value)}
             />
-            <button className="pill pill--small" type="submit">
+            <button className="ghost-pill" type="submit">
               Unlock
             </button>
           </form>
         ) : (
-          <div className="placeholder">
-            <p>Secret content unlocked. Add sensitive notes here.</p>
-          </div>
+          <div className="secret-box">Secret content unlocked. Add sensitive notes here.</div>
         )}
       </div>
     </main>

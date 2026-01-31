@@ -2,7 +2,7 @@ import { useEffect, useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
 import Counter from '../components/Counter';
 
-const TRIP_DATE = '2026-06-20';
+const TRIP_DATE = new Date('2026-06-20T00:00:00');
 
 const Countdown = () => {
   const [now, setNow] = useState(Date.now());
@@ -13,19 +13,18 @@ const Countdown = () => {
   }, []);
 
   const daysLeft = useMemo(() => {
-    const tripDate = new Date(`${TRIP_DATE}T00:00:00`);
-    const diff = tripDate.getTime() - now;
+    const diff = TRIP_DATE - new Date(now);
     return Math.max(0, Math.ceil(diff / (1000 * 60 * 60 * 24)));
   }, [now]);
 
   return (
     <main className="page page--dark">
-      <Link className="back-button" to="/">
+      <Link className="back-bubble back-bubble--light" to="/">
         Back
       </Link>
       <div className="page__content">
-        <p className="eyebrow">Countdown</p>
         <h1>Days until Netherlands trip</h1>
+        <p className="page__subtext">Counting down to the next adventure.</p>
         <div className="counter-shell">
           <Counter
             value={daysLeft}

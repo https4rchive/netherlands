@@ -35,12 +35,12 @@ const Todo = () => {
 
   return (
     <main className="page">
-      <Link className="back-button" to="/">
+      <Link className="back-bubble" to="/">
         Back
       </Link>
       <div className="page__content">
-        <p className="eyebrow">To Do</p>
-        <h1>Trip tasks</h1>
+        <h1>To Do</h1>
+        <p className="page__subtext">Keep the pre-trip checklist tidy.</p>
         <form className="todo-form" onSubmit={addItem}>
           <input
             type="text"
@@ -48,7 +48,7 @@ const Todo = () => {
             value={text}
             onChange={(event) => setText(event.target.value)}
           />
-          <button className="pill pill--small" type="submit">
+          <button className="ghost-pill" type="submit">
             Add
           </button>
         </form>

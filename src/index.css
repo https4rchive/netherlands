@@ -2,8 +2,8 @@
 
 :root {
   font-family: 'Space Grotesk', system-ui, sans-serif;
-  color: #0f172a;
-  background: #ffffff;
+  color: #f8fafc;
+  background: #070616;
 }
 
 * {
@@ -14,7 +14,7 @@
 
 body {
   min-height: 100vh;
-  background: #ffffff;
+  background: #070616;
 }
 
 #root {
@@ -29,15 +29,4 @@ a {
 button,
 input {
   font-family: inherit;
-}
-
-main {
-  min-height: 100vh;
-}
-
-.eyebrow {
-  text-transform: uppercase;
-  letter-spacing: 0.35em;
-  font-size: 0.7rem;
-  color: #94a3b8;
 }

@@ -1,113 +1,71 @@
-.landing {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 2rem;
-  background: #ffffff;
-}
-
-.landing__menu {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1.5rem 2rem;
-  width: min(780px, 100%);
-  justify-items: center;
-}
-
-.pill {
-  height: 72px;
-  width: 100%;
-  border-radius: 999px;
-  background: #ffffff;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  text-transform: uppercase;
-  letter-spacing: 0.35em;
-  font-weight: 600;
-  font-size: 0.95rem;
-  color: #0f172a;
-  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.12);
-  border: 1px solid rgba(15, 23, 42, 0.05);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  padding: 0 1.5rem;
-}
-
-.pill:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.16);
-}
-
-.pill--second-row {
-  grid-column: 2;
-}
-
-.pill--small {
-  height: 48px;
-  width: auto;
-  letter-spacing: 0.25em;
-  font-size: 0.8rem;
-  padding: 0 1.25rem;
-}
-
 .page {
   min-height: 100vh;
-  padding: 5rem 6vw 3rem;
-  background: #ffffff;
+  background: #070616;
+  color: #f8fafc;
+  padding: 6rem 6vw 4rem;
+  position: relative;
 }
 
 .page--dark {
-  background: #0f172a;
-  color: #ffffff;
-}
-
-.page--dark .eyebrow {
-  color: rgba(255, 255, 255, 0.6);
+  background: #04030b;
 }
 
 .page__content {
-  max-width: 980px;
+  max-width: 960px;
   margin: 0 auto;
   display: grid;
   gap: 1.5rem;
 }
 
-.back-button {
-  position: fixed;
-  top: 2rem;
-  left: 2rem;
-  font-size: 0.8rem;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  padding: 0.4rem 0.9rem;
-  border-radius: 999px;
-  background: rgba(15, 23, 42, 0.05);
-  color: inherit;
-  border: 1px solid rgba(15, 23, 42, 0.1);
+.page__subtext {
+  color: rgba(248, 250, 252, 0.6);
+  font-size: 1.05rem;
+  line-height: 1.6;
 }
 
-.page--dark .back-button {
+.page h1 {
+  font-size: clamp(2.5rem, 4vw, 3.5rem);
+  letter-spacing: 0.02em;
+}
+
+.back-bubble {
+  position: fixed;
+  top: 2.5rem;
+  left: 2.5rem;
+  padding: 0.55rem 1.4rem;
+  border-radius: 999px;
   background: rgba(255, 255, 255, 0.08);
-  border-color: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  font-size: 0.75rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+}
+
+.back-bubble--light {
+  background: rgba(255, 255, 255, 0.14);
 }
 
 .counter-shell {
   margin-top: 1.5rem;
   padding: 2.5rem 2rem;
-  border-radius: 28px;
-  background: rgba(15, 23, 42, 0.6);
+  border-radius: 30px;
+  background: rgba(10, 9, 30, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   display: flex;
   justify-content: center;
 }
 
-.placeholder {
-  border: 1px dashed #cbd5f5;
-  border-radius: 20px;
-  padding: 3rem;
-  text-align: center;
-  color: #64748b;
-  background: #f8fafc;
+.placeholder-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.25rem;
+}
+
+.placeholder-card {
+  height: 160px;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .todo-form,
@@ -122,10 +80,25 @@
 .secret-form input {
   flex: 1;
   min-width: 240px;
-  height: 48px;
+  height: 52px;
   border-radius: 999px;
-  border: 1px solid #e2e8f0;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.06);
+  color: #ffffff;
   padding: 0 1.25rem;
+}
+
+.ghost-pill {
+  height: 52px;
+  padding: 0 1.5rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  font-size: 0.75rem;
+  cursor: pointer;
 }
 
 .todo-list {
@@ -135,14 +108,13 @@
 }
 
 .todo-item {
-  background: #ffffff;
-  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 20px;
   padding: 0.75rem 1rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  box-shadow: 0 8px 25px rgba(15, 23, 42, 0.08);
-  border: 1px solid rgba(15, 23, 42, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .todo-item.is-done {
@@ -153,26 +125,30 @@
 .todo-item button {
   background: none;
   border: none;
+  color: inherit;
   cursor: pointer;
-  font-size: 0.95rem;
+  font-size: 1rem;
 }
 
 .todo-delete {
-  color: #ef4444;
+  color: #f87171;
+}
+
+.secret-box {
+  padding: 2rem;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
 }
 
 @media (max-width: 900px) {
-  .landing__menu {
-    grid-template-columns: 1fr;
+  .page {
+    padding: 5rem 1.5rem 3rem;
   }
 
-  .pill--second-row {
-    grid-column: auto;
-  }
-
-  .back-button {
+  .back-bubble {
     position: static;
     width: fit-content;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
   }
 }
