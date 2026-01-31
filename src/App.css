@@ -24,8 +24,9 @@
 }
 
 .page h1 {
-  font-size: clamp(2.5rem, 4vw, 3.5rem);
+  font-size: clamp(2.5rem, 4vw, 3.6rem);
   letter-spacing: 0.02em;
+  font-family: 'Playfair Display', serif;
 }
 
 .back-bubble {
@@ -55,6 +56,29 @@
   justify-content: center;
 }
 
+.countdown-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.5rem;
+}
+
+.countdown-card {
+  padding: 1.75rem 1.5rem;
+  border-radius: 26px;
+  background: rgba(10, 9, 30, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  display: grid;
+  justify-items: center;
+  gap: 0.75rem;
+}
+
+.countdown-label {
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  font-size: 0.75rem;
+  color: rgba(248, 250, 252, 0.7);
+}
+
 .placeholder-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -66,6 +90,20 @@
   border-radius: 24px;
   background: rgba(255, 255, 255, 0.06);
   border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.page--gallery .page__content {
+  max-width: 1200px;
+}
+
+.gallery-shell {
+  position: relative;
+  width: 100%;
+  height: min(70vh, 720px);
+  border-radius: 28px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(10, 9, 30, 0.6);
 }
 
 .todo-form,
