@@ -39,7 +39,6 @@ const Countdown = () => {
               gap={12}
               textColor="white"
               fontWeight={900}
-              digitPlaceHolders
             />
             <span className="countdown-label">Days</span>
           </div>
@@ -52,7 +51,6 @@ const Countdown = () => {
               gap={12}
               textColor="white"
               fontWeight={900}
-              digitPlaceHolders
             />
             <span className="countdown-label">Hours</span>
           </div>
@@ -65,7 +63,6 @@ const Countdown = () => {
               gap={12}
               textColor="white"
               fontWeight={900}
-              digitPlaceHolders
             />
             <span className="countdown-label">Minutes</span>
           </div>
@@ -78,7 +75,6 @@ const Countdown = () => {
               gap={12}
               textColor="white"
               fontWeight={900}
-              digitPlaceHolders
             />
             <span className="countdown-label">Seconds</span>
           </div>
