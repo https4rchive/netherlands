@@ -9,6 +9,7 @@
   position: relative;
   overflow: hidden;
   color: #ffffff;
+  padding-top: 1.5rem;
 }
 
 .bubble-landing__overlay {
@@ -24,20 +25,20 @@
   z-index: 1;
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1rem;
   align-items: center;
-  padding-top: 2rem;
-  padding-bottom: 3rem;
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
 }
 
 .bubble-landing .curved-loop-jacket {
-  min-height: 180px;
-  padding-top: 0.5rem;
+  min-height: 220px;
+  padding-top: 1.5rem;
   width: 100%;
 }
 
 .hero-curved-text {
-  font-size: clamp(3.5rem, 5vw, 6rem);
+  font-size: clamp(3.2rem, 4.6vw, 5.6rem);
   fill: #ffffff;
   letter-spacing: 0.08em;
   font-family: 'Playfair Display', serif;
@@ -46,19 +47,20 @@
 .bubble-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 2rem;
+  gap: 1.5rem;
   width: 100%;
   align-items: center;
+  margin-top: -0.5rem;
 }
 
 .bubble {
-  height: clamp(130px, 16vw, 170px);
-  min-width: 220px;
+  height: clamp(120px, 15vw, 160px);
+  min-width: 210px;
   padding: 0 1.5rem;
   background: #ffffff;
   color: #0b0b12;
   border: none;
-  font-size: clamp(1.2rem, 1.6vw, 1.6rem);
+  font-size: clamp(1.1rem, 1.4vw, 1.4rem);
   letter-spacing: 0.28em;
   text-transform: uppercase;
   font-weight: 600;

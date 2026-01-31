@@ -106,6 +106,25 @@
   background: rgba(10, 9, 30, 0.6);
 }
 
+.page--gallery-full {
+  padding: 0;
+}
+
+.page__content--overlay {
+  position: absolute;
+  top: 6rem;
+  left: 6vw;
+  z-index: 5;
+  max-width: min(520px, 70vw);
+}
+
+.gallery-shell--full {
+  height: 100vh;
+  border-radius: 0;
+  border: none;
+  background: transparent;
+}
+
 .todo-form,
 .secret-form {
   display: flex;
